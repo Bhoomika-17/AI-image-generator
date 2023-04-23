@@ -26,7 +26,7 @@ const Home = () => {
             setLoading(true);
         
             try {
-              const response = await fetch('https://ai-image-generator-au8f.onrender.com/api/v1/post', {
+              const response = await fetch('http://localhost:8080/api/v1/post', {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const Home = () => {
       };
 
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto m-28">
         <div>
             <h1 className="font-extrabold text-[#222328] text-[32px]">
                 The Community Showcase
@@ -91,7 +91,7 @@ const Home = () => {
 
                     </h2>
                  )}
-                 <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
+                 <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3 z=0">
                     {searchText ? (
                         <RenderCards 
                         data={searchedResults}
